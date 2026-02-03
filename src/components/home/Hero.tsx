@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, Play, Clock, Wallet, Coins } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Play, Clock, Wallet, Coins, Cpu, Zap } from "lucide-react";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -26,107 +27,140 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+    <section className="relative min-h-[95vh] flex items-center pt-32 pb-20 overflow-hidden">
+      {/* Cyberpunk Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,243,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,243,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+
+      {/* Ambient Neon Glows */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none animate-pulse" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-magenta-500/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none animate-pulse" style={{ backgroundColor: 'rgba(255, 0, 255, 0.1)' }} />
 
       <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Content */}
-        <div className="space-y-8 animate-in slide-in-from-bottom-10 duration-700">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-            </span>
-            The Future of Blockchain is Here
+        {/* Left Side: Content */}
+        <div className="space-y-10 animate-in slide-in-from-left-10 duration-1000">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-cyan-500/5 border border-cyan-500/20 text-cyan-400 text-xs font-black tracking-[0.3em] uppercase italic">
+            <Cpu className="w-4 h-4 animate-spin-slow" />
+            Next-Gen Digital Evolution
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            The World's Most <br />
-            Comprehensive <br />
-            <span className="neon-text-gradient">Blockchain Ecosystem</span>
-          </h1>
+          <div className="space-y-4">
+            <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tighter uppercase italic">
+              <span className="block text-white">THE WORLD'S</span>
+              <span className="block neon-text-cyan">MOST POWERFUL</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-magenta-500" style={{ backgroundImage: 'linear-gradient(90deg, #00f3ff, #ff00ff)' }}>BAYUVERSE</span>
+            </h1>
+          </div>
 
-          <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-            MetaChain is creating the digital ecosystem of the future by increasing the efficiency of metaverse technology with blockchain.
+          <p className="text-xl text-gray-400 leading-relaxed max-w-lg font-light italic border-l-4 border-magenta-500 pl-6">
+            Bayuverse is engineering the digital frontier. Seamlessly integrating blockchain efficiency with a hyper-immersive metaverse experience.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#" className="btn-primary flex items-center justify-center gap-2 group">
-              Start Exploring
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <div className="flex flex-col sm:flex-row gap-6">
+            <Link href="#" className="btn-primary flex items-center justify-center gap-3">
+              Enter Universe
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1" />
             </Link>
-            <Link href="#" className="btn-outline flex items-center justify-center gap-2 group">
-              <Play className="w-4 h-4 fill-current" />
-              Watch Demo
+            <Link href="#" className="btn-outline flex items-center justify-center gap-3">
+              <Zap className="w-5 h-5 fill-current" />
+              Whitepaper
             </Link>
           </div>
 
-          {/* Token Stats */}
-          <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/5">
-            <div>
-              <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Total Used</p>
-              <h4 className="text-2xl font-bold text-white tabular-nums">4,802,826,056</h4>
-              <p className="text-cyan-400 text-xs font-bold">META</p>
+          {/* Token Stats Panel */}
+          <div className="glass-panel p-8 rounded-3xl grid grid-cols-2 gap-10 max-w-xl">
+            <div className="space-y-2">
+              <p className="text-gray-500 text-[10px] uppercase tracking-[0.3em] font-mono">Total Used</p>
+              <h4 className="text-3xl font-black text-white tabular-nums tracking-tighter">
+                4,887,107,014
+              </h4>
+              <div className="flex items-center gap-2">
+                <div className="h-1 flex-1 bg-cyan-500/30 rounded-full overflow-hidden">
+                  <div className="h-full bg-cyan-500 w-[48%]" />
+                </div>
+                <span className="text-cyan-400 text-[10px] font-bold">BAYU</span>
+              </div>
             </div>
-            <div>
-              <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Total Available</p>
-              <h4 className="text-2xl font-bold text-white tabular-nums">10,000,000,000</h4>
-              <p className="text-purple-400 text-xs font-bold">META</p>
+            <div className="space-y-2">
+              <p className="text-gray-500 text-[10px] uppercase tracking-[0.3em] font-mono">Total Available</p>
+              <h4 className="text-3xl font-black text-white/60 tabular-nums tracking-tighter">
+                10,000,000,000
+              </h4>
+              <div className="flex items-center gap-2">
+                <div className="h-1 flex-1 bg-magenta-500/30 rounded-full overflow-hidden">
+                  <div className="h-full bg-magenta-500 w-[100%]" style={{ backgroundColor: '#ff00ff' }} />
+                </div>
+                <span className="text-magenta-400 text-[10px] font-bold" style={{ color: '#ff00ff' }}>BAYU</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* ICO Timer Board */}
-        <div className="relative animate-in fade-in duration-1000 delay-300">
-          <div className="glass-panel rounded-3xl p-8 border border-white/20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        {/* Right Side: ICO Board */}
+        <div className="relative animate-in slide-in-from-right-10 duration-1000 delay-200">
+          <div className="glass-panel rounded-[3rem] p-1 bg-gradient-to-br from-cyan-500/20 to-magenta-500/20">
+            <div className="bg-[#02040a]/90 rounded-[2.9rem] p-10 relative overflow-hidden">
+              {/* Internal Glows */}
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px]" />
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-magenta-500/10 rounded-full blur-[80px]" style={{ backgroundColor: 'rgba(255, 0, 255, 0.1)' }} />
 
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">ICO Ends In</h3>
-              <div className="flex items-center justify-center gap-2 text-cyan-400 text-sm font-medium bg-cyan-500/10 py-1 px-3 rounded-full mx-auto w-fit">
-                <Clock className="w-3 h-3" />
-                1 META = 0.001979 USDT
-              </div>
-            </div>
-
-            <div className="grid grid-cols-4 gap-4 mb-8">
-              {[
-                { val: timeLeft.days, label: "Days" },
-                { val: timeLeft.hours, label: "Hours" },
-                { val: timeLeft.minutes, label: "Minutes" },
-                { val: timeLeft.seconds, label: "Seconds" },
-              ].map((item, i) => (
-                <div key={i} className="bg-black/40 rounded-xl p-3 text-center border border-white/5">
-                  <div className="text-3xl font-bold text-white tabular-nums mb-1">
-                    {String(item.val).padStart(2, '0')}
-                  </div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-widest">{item.label}</div>
+              <div className="text-center mb-12">
+                <div className="inline-block mb-6 relative">
+                  <Image src="/assets/logo.png" alt="Bayuverse Logo" width={80} height={80} className="drop-shadow-[0_0_15px_rgba(0,243,255,0.6)] animate-pulse" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-4xl font-black text-white mb-4 tracking-tighter uppercase italic">ICO PHASE 01</h3>
+                <div className="inline-flex items-center gap-3 text-cyan-400 text-sm font-black bg-cyan-500/10 py-2 px-6 rounded-xl border border-cyan-500/20 uppercase tracking-widest">
+                  <Clock className="w-4 h-4" />
+                  1 BAYU = 0.002049 USDT
+                </div>
+              </div>
 
-            <div className="space-y-4">
-              <button className="w-full btn-primary py-4 text-lg shadow-xl shadow-cyan-500/20">
-                Buy Now
-              </button>
-              <div className="flex items-center justify-between text-xs text-gray-400 px-2">
-                <span>15% Ref Bonus</span>
-                <Link href="#" className="hover:text-white transition-colors">Your Referral Link</Link>
+              {/* Countdown Grid */}
+              <div className="grid grid-cols-4 gap-4 mb-12">
+                {[
+                  { val: timeLeft.days, label: "Days" },
+                  { val: timeLeft.hours, label: "Hours" },
+                  { val: timeLeft.minutes, label: "Mins" },
+                  { val: timeLeft.seconds, label: "Secs" },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/5 rounded-2xl p-5 border border-white/10 group hover:border-cyan-500/40 transition-all">
+                    <div className="text-4xl font-black text-white tabular-nums mb-1 tracking-tighter group-hover:neon-text-cyan transition-colors">
+                      {String(item.val).padStart(2, '0')}
+                    </div>
+                    <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-6">
+                <button className="w-full btn-primary group">
+                  <span className="flex items-center justify-center gap-3">
+                    ACQUIRE BAYU
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  </span>
+                </button>
+
+                <div className="flex flex-col gap-4 pt-8 border-t border-white/10">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Growth Factor</span>
+                    <span className="text-xs font-black text-magenta-400 uppercase tracking-widest">+15% REWARD</span>
+                  </div>
+                  <div className="p-4 rounded-xl bg-cyan-500/5 border border-cyan-500/10 flex items-center justify-between group cursor-pointer hover:bg-cyan-500/10 transition-colors">
+                    <span className="text-[10px] text-cyan-400/70 font-mono">BA-REF-X992-001</span>
+                    <span className="text-[10px] text-cyan-400 font-bold uppercase underline underline-offset-4">COPY LINK</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Floating badges */}
-          <div className="absolute -top-6 -right-6 glass-panel p-3 rounded-xl flex items-center gap-3 animate-bounce delay-700">
-            <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
-              <Wallet className="w-4 h-4" />
+          {/* Achievement Badge */}
+          <div className="absolute -bottom-8 -right-8 glass-panel py-4 px-6 rounded-2xl flex items-center gap-4 animate-bounce-slow">
+            <div className="w-12 h-12 rounded-xl bg-magenta-500/20 flex items-center justify-center text-magenta-400" style={{ backgroundColor: 'rgba(255, 0, 255, 0.2)', color: '#ff00ff' }}>
+              <Wallet className="w-6 h-6" />
             </div>
             <div>
-              <div className="text-xs text-gray-400">Raised</div>
-              <div className="text-sm font-bold text-white">$9.5M+</div>
+              <div className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Liquidity Locked</div>
+              <div className="text-lg font-black text-white">$9,542,000+</div>
             </div>
           </div>
         </div>

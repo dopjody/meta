@@ -1,436 +1,346 @@
-import { Share2, Globe, Cpu, Users, Award, Briefcase, Building } from "lucide-react";
+import { PageData } from "@/types";
 
-export interface PageContent {
-    title: string;
-    subtitle?: string;
-    heroImage?: string;
-    sections: {
-        title?: string;
-        content?: string;
-        type?: "text" | "grid" | "list" | "team" | "contact";
-        items?: any[];
-    }[];
-}
-
-export const pagesData: Record<string, PageContent> = {
+export const pagesData: Record<string, PageData> = {
     "about-us": {
         title: "About Us",
-        subtitle: "Get to Know MetaChain Ecosystem Better",
+        subtitle: "The Digital Standard of Evolution",
         sections: [
             {
-                title: "Future's Digital Products",
-                content: "We offer innovative digital products and services within the ecosystem. We provide infrastructure with distributed servers located throughout the world.",
-                type: "text"
+                title: "What Is BAYU?",
+                type: "text",
+                content: "Smart apps, digital products, hundreds of different services... Now imagine being able to use them all in a single ecosystem, in harmony. Bayuverse enables you to take part in the world of the future with the most comprehensive digital ecosystem planned with you in mind. designed for transactions within multi-dimensional services and products."
             },
             {
-                title: "Our Vision",
-                content: "We are removing the boundaries between reality and the digital world with the most comprehensive digital ecosystem project planned in line with our goals. With our products and projects, we meet today's digital needs and bring tomorrow's technologies to people.",
-                type: "text"
+                title: "Our Genesis",
+                type: "text",
+                content: "With a vision to make neural-blockchain technology accessible to everyone, we are leading the transformation to Web 3.0. We are working with the best to achieve even greater results! We would like to express our gratitude to all of our investors for their trust and encouragement."
             },
             {
-                title: "Meet Our Executive Staff",
-                type: "team",
-                items: [
-                    { name: "Mark Zuckerberg", role: "CEO & Co Founder" },
-                    { name: "Nick Clegg", role: "President Global Affairs" },
-                    { name: "Susan Li", role: "CFO" },
-                    { name: "Javier Olivan", role: "COO" },
-                    { name: "Chris Cox", role: "CPO" },
-                    { name: "Andrew 'Boz' Bosworth", role: "CTO" },
-                ]
-            },
-            {
-                title: "Our Offices",
+                title: "Neural Collective",
                 type: "grid",
                 items: [
-                    { title: "Meta Headquarters", desc: "1 Hacker Way, Menlo Park, CA 94025, USA" },
-                    { title: "Meta New York", desc: "770 Broadway, New York, NY 10003, USA" },
-                    { title: "Meta London", desc: "1 Rathbone Square, Fitzrovia, London W1T 1FB, UK" },
-                    { title: "Meta Singapore", desc: "South Beach Tower, 38 Beach Rd, Singapore 189767" },
+                    { title: "Oliver Thompson", desc: "Chief Executive Officer - Leading the vision of Bayuverse." },
+                    { title: "Isabella Garcia", desc: "Chief Technology Officer - Architecting the Proof of Bayu protocol." },
+                    { title: "Liam Wilson", desc: "Head of Ecosystem - Expanding Bayuverse global partnerships." }
                 ]
             }
         ]
     },
-    "meta-chain": {
-        title: "MetaChain",
-        subtitle: "The Foundation of the Metaverse",
+    "bayu-coin": {
+        title: "Bayu Coin",
+        subtitle: "The Currency of Existence",
         sections: [
             {
-                title: "Proof of Meta (PoM)",
-                content: "Fast, Secure, and Scalable. MetaAnthill is a structure that minimizes speed, security, and scalability issues. PoM is a consensus where users choose mining methods suitable for their hardware.",
-                type: "text"
-            },
-            {
-                title: "MVM (Meta Virtual Machine)",
-                content: "MetaVirtualMachine is a consensus that provides fast transfer approval. TCPS (Transaction Control Speed) allows over 700,000 transactions per second.",
-                type: "text"
-            },
-            {
-                title: "Mining Types",
+                title: "Entropy Mechanisms",
                 type: "grid",
                 items: [
-                    { title: "MetaMiner", desc: "Uses high-powered computers to mine META." },
-                    { title: "MacroMiner", desc: "Mine on all devices including personal computers." },
-                    { title: "MicroMiner", desc: "Mine META with cell phones." },
+                    { title: "Auto-Burn", desc: "Automated reduction of token supply based on network growth." },
+                    { title: "Fee-Burn", desc: "A percentage of every transaction fee is permanently removed." },
+                    { title: "Strategic Burn", desc: "Quarterly burn events to maintain ecosystem health." }
                 ]
+            },
+            {
+                title: "One Asset for All Realities",
+                type: "text",
+                content: "Use Bayuverse for all products in the Bayuverse ecosystem and benefit from the advantages! BayuCoin is the core utility token that powers the entire network, from BayuPayment to BayuNFT."
             }
         ]
     },
-    "metaairdrop": {
-        title: "MetaAirdrop",
-        subtitle: "Meet the necessary conditions and win 10,000 META",
+    "bayu-wallet": {
+        title: "Bayu Wallet",
+        subtitle: "Secure Core, Universal Access",
         sections: [
             {
-                title: "How to Join",
-                content: "Register now to start earning. Unlike ordinary airdrops, earn rewards with MetaAirtime. New accounts receive 10,000 META equivalent immediately upon verification.",
-                type: "text"
+                title: "One Tap, Total Dominion",
+                type: "text",
+                content: "From digital assets to physical deeds, gold to fiat, all assets will be in your hands with just one tap. We enable the direct exchange of all assets by eliminating intermediaries. One Screen, One Button, One Transaction!"
             },
             {
-                title: "Earning Mechanisms",
+                title: "Core Platforms",
+                type: "grid",
+                items: [
+                    { title: "Neural Overlay", desc: "Experience seamless browsing and easy access to Web 3.0 services." },
+                    { title: "Mobile Core", desc: "Take your digital wallet on the go and manage assets anywhere." },
+                    { title: "Terminal Application", desc: "Enjoy a powerful, high-security platform for professional management." }
+                ]
+            },
+            {
+                title: "Protocol Features",
                 type: "list",
                 items: [
-                    "MetaAirtime: Continuous rewards for active users.",
-                    "Referral Bonus: Earn when friends join via your link.",
-                    "Verification Reward: Immediate bonus after KYC."
+                    "Direct Custody: Full control without intermediaries.",
+                    "Web 3.0 Nexus: Direct connection to decentralized apps.",
+                    "Unified Ledger: Consolidate and manage effortlessly.",
+                    "Neural Identity Assignment: Simple biometric registration process."
                 ]
             }
         ]
     },
-    "manifesto": {
-        title: "Manifesto",
-        subtitle: "The Future is Open",
+    "bayuairdrop": {
+        title: "Bayu Airdrop",
+        subtitle: "Join the Influx",
         sections: [
-            { content: "We believe in a future where community-driven technology empowers individuals to reclaim their digital sovereignty. MetaChain is not just a network; it's a movement towards an open, interoperable metaverse.", type: "text" }
+            {
+                title: "Claim Bayuverse Now",
+                type: "text",
+                content: "Meet the necessary conditions and win now the equivalent of 10,000 Bayuverse tokens! All users who participate in and complete tasks in the BayuAirdrop event will earn BAYU rewards."
+            },
+            {
+                title: "Flux Inflow Conditions",
+                type: "list",
+                items: [
+                    "Initialize a Bayuverse ecosystem account.",
+                    "Complete the biometric KYC verification.",
+                    "Invite explorers to earn 15% referral bonus.",
+                    "Participate in daily ecosystem simulations."
+                ]
+            }
+        ]
+    },
+    "bayu-chain": {
+        title: "Bayu Chain",
+        subtitle: "The Next-Gen Layer 1 Neural Protocol",
+        sections: [
+            {
+                title: "Engineering Excellence",
+                type: "grid",
+                items: [
+                    { title: "Proof of Bayu (PoB)", desc: "Revolutionary consensus mechanism for high-speed neural checks." },
+                    { title: "700,000+ TPS", desc: "Ultra-fast transaction processing with near-zero latency." },
+                    { title: "BVM Compatible", desc: "Bayu Virtual Machine compatibility for smart contracts." }
+                ]
+            },
+            {
+                title: "Fortified Encryption",
+                type: "text",
+                content: "Bayuverse provides complete protection with its decentralized structure and advanced asymmetric quantum encryption measures."
+            }
         ]
     },
     "discover": {
-        title: "Discover MetaChain",
-        subtitle: "Everything You Need to Know About MetaChain Ecosystem",
+        title: "Discover",
+        subtitle: "The Hyper-Integrated Realm",
         sections: [
             {
-                title: "Comprehensive Ecosystem",
+                title: "Explore the Frontier",
                 type: "grid",
                 items: [
-                    { title: "MetaChain", desc: "Security, scalability, and efficiency with PoM consensus." },
-                    { title: "MetaCoin", desc: "New-Gen Local Digital Asset." },
-                    { title: "MetaExchange", desc: "Secure and User-Friendly Digital Asset Platform." },
-                    { title: "MetaLaunchpad", desc: "Create and list your own digital asset easily." },
-                    { title: "MetaNFT", desc: "Redefining NFTs with a Brand New Experience." },
-                    { title: "MetaWallet", desc: "Next-Gen Digital Wallet for all values." },
-                    { title: "MetaMLM", desc: "Unique reward system where everyone wins." },
-                    { title: "MetaRealEstate", desc: "Affordable Real Estate via Digital Ownership." },
-                    { title: "MetaPayment", desc: "The future of cross-border and local payments." }
-                ]
-            },
-            {
-                title: "What is MetaChain?",
-                content: "MetaChain is building the world's most comprehensive blockchain ecosystem. Much more than a digital asset platform, it completely changes the understanding of blockchain with its ecosystem and responds to every need of individuals.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-coin": {
-        title: "MetaCoin (META)",
-        subtitle: "The Native Asset of MetaChain",
-        sections: [
-            {
-                title: "Burn Mechanisms",
-                content: "MetaChain will be burned regularly with three different mechanisms: Auto-Burn, Fee-Burn, and Strategic Burn to ensure long-term value.",
-                type: "text"
-            },
-            {
-                title: "Utility",
-                type: "grid",
-                items: [
-                    { title: "Events", desc: "Participate in MetaAirdrop events to earn META." },
-                    { title: "All Products", desc: "Use MetaChain for all products in the ecosystem." }
+                    { title: "BayuDex", desc: "Next-gen decentralized neural exchange platform." },
+                    { title: "BayuNFT", desc: "Digital artifacts and collective marketplace." },
+                    { title: "BayuRealEstate", desc: "Tokenized reality property investment." },
+                    { title: "BayuMovie", desc: "Neural-powered content streaming." },
+                    { title: "BayuMusic", desc: "Decentralized audio distribution protocol." },
+                    { title: "BayuPayment", desc: "Universal settlement gateway protocol." }
                 ]
             }
         ]
     },
-    "exchange": {
-        title: "MetaExchange",
-        subtitle: "Trade Without Limits",
-        sections: [
-            {
-                title: "Trading Interfaces",
-                type: "grid",
-                items: [
-                    { title: "Lite Mode", desc: "Clean interface for beginners." },
-                    { title: "Pro Mode", desc: "Advanced tools for professional traders." },
-                    { title: "Meta Mode", desc: "Customizable workspace for institutions." }
-                ]
-            }
-        ]
-    },
-    "launchpad": {
-        title: "MetaLaunchpad",
-        subtitle: "Launch Your Vision",
-        sections: [
-            {
-                title: "Easy Token Creation",
-                content: "Create your own digital asset within minutes without any software knowledge. Use our Wizard for automated deployment or Advanced Mode for customization.",
-                type: "text"
-            },
-            {
-                title: "Features",
-                type: "grid",
-                items: [
-                    { title: "Advanced Mode", desc: "Customize assets without software knowledge." },
-                    { title: "Wizard", desc: "Create digital assets within minutes." },
-                    { title: "Airdrop Tools", desc: "Organize airdrops with AI-backed tools." }
-                ]
-            }
-        ]
-    },
-    "meta-nft": {
-        title: "MetaNFT",
-        subtitle: "Own the Digital Future",
-        sections: [
-            {
-                title: "Features",
-                type: "grid",
-                items: [
-                    { title: "Fractional NFTs", desc: "Own a piece of high-value digital assets." },
-                    { title: "NFT Marketplace", desc: "The gateway to unique digital collectibles." },
-                    { title: "Meta Studio", desc: "Create and mint NFTs effortlessly." }
-                ]
-            }
-        ]
-    },
-    "meta-realestate": {
-        title: "MetaRealEstate",
-        subtitle: "Global Property Ownership",
-        sections: [
-            {
-                title: "Digital Ownership",
-                content: "Affordable real estate investment is now possible. Tokenize properties to reach global investors and earn regular income from rental yields.",
-                type: "text"
-            },
-            {
-                title: "Advantages",
-                type: "list",
-                items: ["Low Capital Requirement", "Regular Income Distribution", "No Intermediary Fees"]
-            }
-        ]
-    },
-    "meta-wallet": {
-        title: "MetaWallet",
-        subtitle: "Control Your Wealth",
-        sections: [
-            {
-                title: "Multi-Chain Support",
-                content: "Store and manage all your digital assets in one place. One click, all assets. Secure, private, and powerful.",
-                type: "text"
-            },
-            {
-                title: "Platforms",
-                type: "grid",
-                items: [
-                    { title: "Browser Extension", desc: "Seamless browsing and access to services." },
-                    { title: "Mobile App", desc: "Manage assets on the go." },
-                    { title: "Desktop App", desc: "Powerful and secure asset management." }
-                ]
-            }
-        ]
-    },
-    "meta-mlm": {
-        title: "Meta MLM",
-        subtitle: "Connect and Grow",
-        sections: [
-            {
-                title: "Earning for the Whole Ecosystem",
-                content: "Refer friends and earn up to Step 19. A system that scales with the community and distributes rewards fairly based on contribution.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-movie": {
-        title: "Meta Movie",
-        subtitle: "Decentralized Cinema",
-        sections: [
-            {
-                title: "Funding Projects",
-                content: "Revolutionize the film industry. Fund your creative projects through tokenization and share future revenues with your supporters.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-music": {
-        title: "Meta Music",
-        subtitle: "Sound of the Future",
-        sections: [
-            {
-                title: "Raise Funds for Your Demo",
-                content: "Artists can tokenize their work to raise funds directly from fans. No middlemen, full transparency, and global reach.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-payment": {
-        title: "Meta Payment",
-        subtitle: "Seamless Global Payments",
-        sections: [
-            {
-                title: "Payment Solutions",
-                type: "grid",
-                items: [
-                    { title: "MetaCard", desc: "Spend crypto anywhere cards are accepted." },
-                    { title: "Online Gateway", desc: "Accept META on your website." },
-                    { title: "Point of Sale", desc: "Physical POS systems for retail shops." }
-                ]
-            }
-        ]
-    },
-    "tokenomics": {
-        title: "Tokenomics",
-        subtitle: "The Economy of Tomorrow",
-        sections: [
-            {
-                title: "Token Distribution",
-                type: "list",
-                items: ["40% Ecosystem Growth", "20% Team", "10% Advisors", "30% Public Sale"]
-            }
-        ]
-    },
-    "contacts": {
-        title: "Contact Us",
-        subtitle: "We are here to help",
-        sections: [
-            {
-                title: "Get in Touch",
-                type: "grid",
-                items: [
-                    { title: "Live Chat", desc: "Chat with our support team 24/7." },
-                    { title: "Email Support", desc: "support@metaversechain.net" }
-                ]
-            },
-            {
-                title: "Our Offices",
-                type: "text",
-                content: "Visit us at our global headquarters in Menlo Park, CA, or our regional offices in New York, London, and Singapore."
-            }
-        ]
-    },
-    "dictionary": { title: "Dictionary", subtitle: "Blockchain Terms Explained", sections: [{ title: "Glossary", type: "list", items: ["Bag: Digital assets stored in a wallet.", "Bear Market: A downtrend in cryptocurrency markets.", "Blockchain: Unalterable structure of encrypted data blocks.", "Bull Market: An uptrend in cryptocurrency markets.", "Cold Wallet: Offline storage for digital assets.", "Consensus: Network agreement on transaction validity.", "DeFi: Decentralized Finance.", "Gas Fee: Transaction fee on the blockchain.", "HODL: Holding onto assets despite volatility.", "Mining: Configuring hardware to process transactions.", "NFT: Non-Fungible Token.", "Smart Contract: Self-executing digital contracts.", "Wallet: A tool to store private keys and assets.", "Mainnet: The primary operational network.", "Mempool: Waiting area for unconfirmed transactions.", "Satoshi: The smallest unit of Bitcoin.", "Whale: Someone holding a massive amount of crypto."] }] },
     "roadmap": {
         title: "Roadmap",
-        subtitle: "Our Journey to the Future",
+        subtitle: "The Path to Singular Vision",
         sections: [
             {
-                title: "2022 - Foundation",
+                title: "Start - 2024: Genesis",
                 type: "text",
-                content: "Formation of the MetaChain Initiative as a DAO-managed fork. Divergence from corporate entities to focus on 100% community-driven development. Implementation of Bullshark/Narwhal consensus for fair ordering."
+                content: "Inception of Bayuverse, core protocol development, and initial seed funding. Launch of BayuAirdrop beta and ecosystem initial growth phase."
             },
             {
-                title: "2025 - Expansion",
+                title: "2025 - 2026: Expansion",
                 type: "grid",
                 items: [
-                    { title: "Ecosystem Integrations", desc: "Partnerships with Oracles and RPCs." },
-                    { title: "Regulatory Compliance", desc: "Aligning with MiCA and FINMA guidelines." },
-                    { title: "Mainnet Launch", desc: "Official launch of MetaChain Mainnet without VC lock-ups." }
+                    { title: "Mainnet Initialization", desc: "Official rollout of the Bayuverse Layer 1 protocol." },
+                    { title: "Hyper-Bridge", desc: "Neural interoperability with major blockchain networks." },
+                    { title: "BayuPayment Alpha", desc: "First real-world neural payment integration tests." }
                 ]
             },
             {
-                title: "2026 - Global Scale",
-                type: "grid",
+                title: "2027 - 2030: Convergence",
+                type: "list",
                 items: [
-                    { title: "Community TGE", desc: "Public Token Generation Event (Jan 1, 2026)." },
-                    { title: "Exchange Listings", desc: "Listing on Tier-1 CEX and DEX platforms." },
-                    { title: "Mobile Light Client", desc: "Secure blockchain verification on smartphones." }
+                    "Integration with 1000+ global mega-merchants.",
+                    "Launch of BayuBank digital banking services.",
+                    "Full ecosystem neural decentralization via DAO.",
+                    "Bayuverse Smart City infrastructure pilot."
                 ]
-            },
-            {
-                title: "2027 - Enterprise",
-                type: "grid",
-                items: [
-                    { title: "Enterprise Subnets", desc: "Dedicated subnets for corporate partners." },
-                    { title: "Decentralized ID", desc: "Global rollout of MetaID standard." },
-                    { title: "Cross-Chain Interop", desc: "IBC implementation for seamless asset flow." }
-                ]
-            },
-            {
-                title: "2028 - Real World",
-                type: "grid",
-                items: [
-                    { title: "RWA Tokenization", desc: "Real estate and commodities trading on-chain." },
-                    { title: "Dynamic Sharding", desc: "Scaling network capacity for millions of users." },
-                    { title: "Sustainability", desc: "Achieving full carbon neutrality." }
-                ]
-            },
-            {
-                title: "2030 - Vision",
-                type: "text",
-                content: "The Open Metaverse: A fully interoperable digital economy. Protocol Ossification: Reaching stability and immutability. Long-Term Vision: Research into post-quantum cryptography."
             }
         ]
     },
     "careers": {
         title: "Careers",
-        subtitle: "Build the Future With Us",
+        subtitle: "Engineer Reality with Us",
         sections: [
             {
-                title: "Why Join Us?",
-                type: "grid",
+                title: "Why Enter the Core?",
+                type: "list",
                 items: [
-                    { title: "Competitive Salary", desc: "Top-tier compensation packages." },
-                    { title: "Flexible Work", desc: "Hybrid Remote & In-House options." },
-                    { title: "Strong Benefits", desc: "Health insurance, foreign language support." },
-                    { title: "Social Diversity", desc: "Inclusive environment for everyone." }
+                    "Collaborate with the most advanced minds.",
+                    "Remote-first neural culture.",
+                    "Competitive credit and BAYU token incentives.",
+                    "Define the next standard of existence."
                 ]
             },
             {
-                title: "Open Positions",
-                type: "list",
+                title: "Open Interfaces",
+                type: "grid",
                 items: [
-                    "Quality Assurance Engineer - Fulltime",
-                    "Javascript Developer - Fulltime",
-                    "DevOps Lead - Fulltime",
-                    "Technical Project Manager - Fulltime",
-                    "Blockchain Developer - Fulltime"
+                    { title: "Senior Protocol Engineer", desc: "Focus on PoB consensus optimization." },
+                    { title: "Experience Designer", desc: "Shape the hyper-immersive ecosystem UI." },
+                    { title: "Ecosystem Growth Architect", desc: "Expand our node network and partnerships." }
                 ]
+            }
+        ]
+    },
+    "exchange": {
+        title: "Exchange",
+        subtitle: "Neural Asset Liquidation",
+        sections: [
+            {
+                title: "Velocity & Security",
+                type: "text",
+                content: "Trade digital artifacts with the fastest transaction speeds in the industry. Powered by the Bayuverse engine."
+            }
+        ]
+    },
+    "launchpad": {
+        title: "Launchpad",
+        subtitle: "Nurturing Evolution",
+        sections: [
+            {
+                title: "Node Support",
+                type: "text",
+                content: "We propel the most advanced concepts to the blockchain world via universal interfaces."
+            }
+        ]
+    },
+    "bayu-nft": {
+        title: "Bayu NFT",
+        subtitle: "Universal Artifact Hub",
+        sections: [
+            {
+                title: "Lease & Liquidate",
+                type: "text",
+                content: "Lease, segment and liquidate your Artifacts. Manage your collection with advanced metadata tools."
+            }
+        ]
+    },
+    "bayu-realestate": {
+        title: "Real Estate",
+        subtitle: "Tokenized Territory Investment",
+        sections: [
+            {
+                title: "Universal Domain",
+                type: "text",
+                content: "Invest in properties across all sectors with minimal friction via BayuRealEstate tokenization."
+            }
+        ]
+    },
+    "bayu-mlm": {
+        title: "MLM System",
+        subtitle: "Neural Referrals",
+        sections: [
+            {
+                title: "Synthesized Earnings",
+                type: "text",
+                content: "Build your node network and earn 15% bonuses within the most secure neural ecosystem."
+            }
+        ]
+    },
+    "bayu-movie": {
+        title: "Bayu Movie",
+        subtitle: "Vision Redefined",
+        sections: [
+            {
+                title: "Immersive Presence",
+                type: "text",
+                content: "Empowering content creators and observers with decentralized streaming services."
+            }
+        ]
+    },
+    "bayu-music": {
+        title: "Bayu Music",
+        subtitle: "Sonic Blockchain",
+        sections: [
+            {
+                title: "Frequency Value",
+                type: "text",
+                content: "Synthesize and distribute your audio directly to the collective while retaining full control."
+            }
+        ]
+    },
+    "bayu-payment": {
+        title: "Bayu Payment",
+        subtitle: "The Universal Settlement Gateway",
+        sections: [
+            {
+                title: "Core Settlement",
+                type: "text",
+                content: "A singular platform for all settlement methods. Execute transactions flexibly with BayuPayment."
+            }
+        ]
+    },
+    "privacy-policy": {
+        title: "Privacy Policy",
+        subtitle: "Identity Integrity",
+        sections: [
+            {
+                title: "Integrity Assurance",
+                type: "text",
+                content: "We are committed to protecting your identity and ensuring you have complete dominion over your data."
             }
         ]
     },
     "listing-platforms": {
         title: "Listing Platforms",
-        subtitle: "Where to Trade META",
+        subtitle: "Hyper-Availability",
         sections: [
             {
-                title: "Available Exchanges",
-                type: "grid",
+                title: "Strategic Exchange Interconnects",
+                type: "list",
                 items: [
-                    { title: "Binance", desc: "World's largest crypto exchange." },
-                    { title: "Coinbase", desc: "Top US-based trading platform." },
-                    { title: "OKX", desc: "Secure and reliable trading." },
-                    { title: "KuCoin", desc: "The People's Exchange." },
-                    { title: "Huobi (HTX)", desc: "Leading digital asset platform." },
-                    { title: "Bybit", desc: "Innovative crypto exchange." },
-                    { title: "Gate.io", desc: "Wide range of digital assets." },
-                    { title: "MEXC Global", desc: "High performance matching engine." },
-                    { title: "Bitget", desc: "Secure platform for trading." },
-                    { title: "Crypto.com", desc: "Trusted by 80M+ users." }
+                    "Binance - Global Tier 1",
+                    "OKX - Institutional Liquidity",
+                    "Bybit - Advanced Trading",
+                    "KuCoin - Artifact Discovery",
+                    "Gate.io - Ecosystem Partner"
+                ]
+            }
+        ]
+    },
+    "dictionary": {
+        title: "Dictionary",
+        subtitle: "Bayuverse Terminology",
+        sections: [
+            {
+                title: "Core Lexicon",
+                type: "list",
+                items: [
+                    "Influx: A significant accumulation of tokens.",
+                    "Entropy: The permanent removal of tokens from the pool.",
+                    "Convergence: The state of protocol synchronization.",
+                    "Singularity: Holding assets through all flux states."
                 ]
             }
         ]
     },
     "whitepaper": {
         title: "Whitepaper",
-        subtitle: "The Technical Foundation",
+        subtitle: "Neural Architecture",
         sections: [
             {
-                title: "The New Standard",
+                title: "Singular Vision",
                 type: "text",
-                content: "MetaChain is creating the digital ecosystem of the future by increasing the efficiency of metaverse technology with blockchain. Our Proof of Meta consensus mechanism ensures speed, security, and scalability."
-            },
+                content: "The Bayuverse Whitepaper details our Proof of Bayu consensus and the roadmap to a universal digital realm."
+            }
+        ]
+    },
+    "contacts": {
+        title: "Contact Interface",
+        subtitle: "Support & Uplink",
+        sections: [
             {
-                title: "Download",
-                type: "list",
-                items: [
-                    "MetaChain Technical Whitepaper v1.0 (PDF)",
-                    "Tokenomics Paper (PDF)",
-                    "Consensus Mechanism Research (PDF)"
-                ]
+                title: "Global Uplink",
+                type: "text",
+                content: "Access the terminal for any technical or functional queries. We are here to guide your evolution."
             }
         ]
     }

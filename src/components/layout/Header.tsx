@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X, ArrowRight, LayoutGrid, Coins, Globe, Wallet, Building, Music, Clapperboard, CreditCard, ShoppingBag, Cpu, Users } from "lucide-react";
 
@@ -33,6 +34,7 @@ export default function Header() {
         {
             label: "Corporate",
             items: [
+                { name: "Home", href: "/" },
                 { name: "About Us", href: "/web/about-us" },
                 { name: "Career", href: "/web/careers" },
                 { name: "Contact", href: "/web/contacts" },
@@ -44,6 +46,7 @@ export default function Header() {
         {
             label: "Products",
             items: [
+                { name: "Home", href: "/" },
                 { name: "MetaAirdrop", href: "/web/metaairdrop" },
                 { name: "MetaChain", href: "/web/meta-chain" },
                 { name: "MetaDex", href: "/web/dex" },
@@ -55,6 +58,7 @@ export default function Header() {
         {
             label: "Learn",
             items: [
+                { name: "Home", href: "/" },
                 { name: "Dictionary", href: "/web/dictionary" },
                 { name: "Whitepaper", href: "/web/whitepaper" },
                 { name: "Tokenomics", href: "/web/tokenomics" },
@@ -89,15 +93,25 @@ export default function Header() {
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all">
-                            <span className="text-white font-bold text-xl">M</span>
+                    <Link href="/" className="flex items-center gap-3 group">
+                        <div className="relative w-12 h-12">
+                            <Image
+                                src="/assets/logo.png"
+                                alt="Bayuverse Logo"
+                                fill
+                                className="object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]"
+                            />
                         </div>
-                        <span className="text-2xl font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-200 transition-all hidden sm:block">
-                            MetaChain
-                        </span>
+                        <div className="relative w-32 h-8 hidden sm:block">
+                            <Image
+                                src="/assets/name.png"
+                                alt="Bayuverse"
+                                fill
+                                className="object-contain brightness-200"
+                            />
+                        </div>
                     </Link>
 
                     {/* Cube Menu (App Launcher) */}
