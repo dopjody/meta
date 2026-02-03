@@ -131,201 +131,126 @@ export const pagesData: Record<string, PageContent> = {
             }
         ]
     },
-    "dictionary": { title: "Dictionary", subtitle: "Blockchain Terms Explained", sections: [{ content: "A comprehensive glossary of blockchain terms...", type: "text" }] },
-    "roadmap": { title: "Roadmap", subtitle: "Our Journey to the Future", sections: [{ content: "Q1 2026: MetaChain Mainnet Launch...", type: "text" }] },
-    "discover": {
-        title: "Discover MetaChain",
-        subtitle: "Everything You Need to Know About MetaChain Ecosystem",
+    "dictionary": { title: "Dictionary", subtitle: "Blockchain Terms Explained", sections: [{ title: "Glossary", type: "list", items: ["Bag: Digital assets stored in a wallet.", "Bear Market: A downtrend in cryptocurrency markets.", "Blockchain: Unalterable structure of encrypted data blocks.", "Bull Market: An uptrend in cryptocurrency markets.", "Cold Wallet: Offline storage for digital assets.", "Consensus: Network agreement on transaction validity.", "DeFi: Decentralized Finance.", "Gas Fee: Transaction fee on the blockchain.", "HODL: Holding onto assets despite volatility.", "Mining: Configuring hardware to process transactions.", "NFT: Non-Fungible Token.", "Smart Contract: Self-executing digital contracts.", "Wallet: A tool to store private keys and assets.", "Mainnet: The primary operational network.", "Mempool: Waiting area for unconfirmed transactions.", "Satoshi: The smallest unit of Bitcoin.", "Whale: Someone holding a massive amount of crypto."] }] },
+    "roadmap": {
+        title: "Roadmap",
+        subtitle: "Our Journey to the Future",
         sections: [
             {
-                title: "Ecosystem Overview",
+                title: "2022 - Foundation",
+                type: "text",
+                content: "Formation of the MetaChain Initiative as a DAO-managed fork. Divergence from corporate entities to focus on 100% community-driven development. Implementation of Bullshark/Narwhal consensus for fair ordering."
+            },
+            {
+                title: "2025 - Expansion",
                 type: "grid",
                 items: [
-                    { title: "MetaChain", desc: "Security, scalability, and efficiency." },
-                    { title: "MetaCoin", desc: "New-Gen Local Digital Asset." },
-                    { title: "MetaExchange", desc: "Secure and User-Friendly Digital Asset Platform." },
-                    { title: "MetaLaunchpad", desc: "Create and list your own digital asset." },
-                    { title: "MetaNFT", desc: "Redefining NFTs with a Brand New Experience." },
-                    { title: "MetaWallet", desc: "Next-Gen Digital Wallet." },
+                    { title: "Ecosystem Integrations", desc: "Partnerships with Oracles and RPCs." },
+                    { title: "Regulatory Compliance", desc: "Aligning with MiCA and FINMA guidelines." },
+                    { title: "Mainnet Launch", desc: "Official launch of MetaChain Mainnet without VC lock-ups." }
                 ]
             },
             {
-                title: "What Sets MetaChain Apart?",
-                content: "MetaChain is building the world's most comprehensive blockchain ecosystem. Much more than a digital asset platform, it changes the understanding of blockchain with its Proof of Meta consensus mechanism, offering fast transaction speeds and insurmountable security.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-coin": {
-        title: "MetaCoin",
-        subtitle: "Digital World's Cryptocurrency",
-        sections: [
-            {
-                title: "Mechanisms",
-                content: "MetaChain will be burned regularly with three different burning mechanisms: Auto-Burn, Fee-Burn, and Strategic Burn.",
-                type: "text"
+                title: "2026 - Global Scale",
+                type: "grid",
+                items: [
+                    { title: "Community TGE", desc: "Public Token Generation Event (Jan 1, 2026)." },
+                    { title: "Exchange Listings", desc: "Listing on Tier-1 CEX and DEX platforms." },
+                    { title: "Mobile Light Client", desc: "Secure blockchain verification on smartphones." }
+                ]
             },
             {
-                title: "Utility",
+                title: "2027 - Enterprise",
                 type: "grid",
                 items: [
-                    { title: "Events", desc: "Participate in MetaAirdrop events to earn META." },
-                    { title: "All Products", desc: "Use MetaChain for all products in the ecosystem." }
+                    { title: "Enterprise Subnets", desc: "Dedicated subnets for corporate partners." },
+                    { title: "Decentralized ID", desc: "Global rollout of MetaID standard." },
+                    { title: "Cross-Chain Interop", desc: "IBC implementation for seamless asset flow." }
                 ]
+            },
+            {
+                title: "2028 - Real World",
+                type: "grid",
+                items: [
+                    { title: "RWA Tokenization", desc: "Real estate and commodities trading on-chain." },
+                    { title: "Dynamic Sharding", desc: "Scaling network capacity for millions of users." },
+                    { title: "Sustainability", desc: "Achieving full carbon neutrality." }
+                ]
+            },
+            {
+                title: "2030 - Vision",
+                type: "text",
+                content: "The Open Metaverse: A fully interoperable digital economy. Protocol Ossification: Reaching stability and immutability. Long-Term Vision: Research into post-quantum cryptography."
             }
         ]
     },
-    "exchange": {
-        title: "MetaExchange",
-        subtitle: "The Future of Asset Trading",
+    "careers": {
+        title: "Careers",
+        subtitle: "Build the Future With Us",
         sections: [
             {
-                title: "Trading Modes",
+                title: "Why Join Us?",
                 type: "grid",
                 items: [
-                    { title: "Lite", desc: "Designed for beginners and anyone entering crypto." },
-                    { title: "Pro", desc: "Advanced indicator tables and tools for experienced investors." },
-                    { title: "Meta", desc: "Customizable panel for financial professionals." }
+                    { title: "Competitive Salary", desc: "Top-tier compensation packages." },
+                    { title: "Flexible Work", desc: "Hybrid Remote & In-House options." },
+                    { title: "Strong Benefits", desc: "Health insurance, foreign language support." },
+                    { title: "Social Diversity", desc: "Inclusive environment for everyone." }
                 ]
-            }
-        ]
-    },
-    "launchpad": {
-        title: "MetaLaunchpad",
-        subtitle: "Create Digital Asset Easily",
-        sections: [
+            },
             {
-                title: "Launch Your Token",
+                title: "Open Positions",
                 type: "list",
                 items: [
-                    "Create MetaChain Account",
-                    "Verify with Phone & Mail",
-                    "Launch Your Token effortlessly"
+                    "Quality Assurance Engineer - Fulltime",
+                    "Javascript Developer - Fulltime",
+                    "DevOps Lead - Fulltime",
+                    "Technical Project Manager - Fulltime",
+                    "Blockchain Developer - Fulltime"
                 ]
+            }
+        ]
+    },
+    "listing-platforms": {
+        title: "Listing Platforms",
+        subtitle: "Where to Trade META",
+        sections: [
+            {
+                title: "Available Exchanges",
+                type: "grid",
+                items: [
+                    { title: "Binance", desc: "World's largest crypto exchange." },
+                    { title: "Coinbase", desc: "Top US-based trading platform." },
+                    { title: "OKX", desc: "Secure and reliable trading." },
+                    { title: "KuCoin", desc: "The People's Exchange." },
+                    { title: "Huobi (HTX)", desc: "Leading digital asset platform." },
+                    { title: "Bybit", desc: "Innovative crypto exchange." },
+                    { title: "Gate.io", desc: "Wide range of digital assets." },
+                    { title: "MEXC Global", desc: "High performance matching engine." },
+                    { title: "Bitget", desc: "Secure platform for trading." },
+                    { title: "Crypto.com", desc: "Trusted by 80M+ users." }
+                ]
+            }
+        ]
+    },
+    "whitepaper": {
+        title: "Whitepaper",
+        subtitle: "The Technical Foundation",
+        sections: [
+            {
+                title: "The New Standard",
+                type: "text",
+                content: "MetaChain is creating the digital ecosystem of the future by increasing the efficiency of metaverse technology with blockchain. Our Proof of Meta consensus mechanism ensures speed, security, and scalability."
             },
             {
-                title: "Features",
-                type: "grid",
-                items: [
-                    { title: "Advanced Mode", desc: "Customize assets without software knowledge." },
-                    { title: "Wizard", desc: "Create digital assets within minutes." },
-                    { title: "Airdrop Tools", desc: "Organize airdrops with AI-backed tools." }
-                ]
-            }
-        ]
-    },
-    "meta-nft": {
-        title: "MetaNFT",
-        subtitle: "A Brand New NFT Experience",
-        sections: [
-            {
-                title: "The Gateway to NFTs",
-                type: "grid",
-                items: [
-                    { title: "Rent or Fractionalize", desc: "Rent, fractionalize, and share ownership of NFTs." },
-                    { title: "Easy Creation", desc: "Create NFTs with no coding knowledge." },
-                    { title: "Customization", desc: "Personalize NFTs using user-friendly tools." }
-                ]
-            }
-        ]
-    },
-    "meta-realestate": {
-        title: "MetaRealEstate",
-        subtitle: "Invest Smarter Tokenize Easier",
-        sections: [
-            {
-                title: "Unique Features",
-                type: "grid",
-                items: [
-                    { title: "Digital Estate", desc: "Own real-world real estate with digital ownership." },
-                    { title: "Tokenize", desc: "Tokenize assets to reach global investors." },
-                    { title: "Accessible", desc: "Capitalize on real estate with low entry barriers." }
-                ]
-            },
-            {
-                title: "Advantages",
-                type: "list",
-                items: ["Low Capital Requirement", "Regular Income Distribution", "No Intermediary Fees"]
-            }
-        ]
-    },
-    "meta-wallet": {
-        title: "MetaWallet",
-        subtitle: "Store Securely Transact Easily",
-        sections: [
-            {
-                title: "One Click, All Assets",
-                content: "From stocks to deeds, gold to crypto - manage everything on one screen. Eliminate intermediaries with direct asset exchange.",
-                type: "text"
-            },
-            {
-                title: "Platforms",
-                type: "grid",
-                items: [
-                    { title: "Browser Extension", desc: "Seamless browsing and access to services." },
-                    { title: "Mobile App", desc: "Manage assets on the go." },
-                    { title: "Desktop App", desc: "Powerful and secure asset management." }
-                ]
-            }
-        ]
-    },
-    "meta-mlm": {
-        title: "Meta MLM",
-        subtitle: "Unleash the Power of Connection",
-        sections: [
-            {
-                title: "Ecosystem Rewards",
-                content: "Invite friends to digital products and earn up to step 19. Collect customized points and increase your MetaAirdrop rewards.",
-                type: "text"
-            }
-        ]
-    },
-    "meta-movie": {
-        title: "Meta Movie",
-        subtitle: "Change the Cinema Industry with Blockchain",
-        sections: [
-            {
-                title: "Revolutionize Filmmaking",
-                type: "grid",
-                items: [
-                    { title: "Creativity", desc: "Present creative projects without professional equipment." },
-                    { title: "Funding", desc: "Determine funding amount and raise funds globally." },
-                    { title: "Tokenization", desc: "Projects are tokenized for investor purchase." }
-                ]
-            }
-        ]
-    },
-    "meta-music": {
-        title: "Meta Music",
-        subtitle: "Create, Tokenize, and Share Your Music",
-        sections: [
-            {
-                title: "For Artists",
+                title: "Download",
                 type: "list",
                 items: [
-                    "Create a demo of your music project.",
-                    "Tokenize your work with simple steps.",
-                    "Showcase to investors and raise funds."
+                    "MetaChain Technical Whitepaper v1.0 (PDF)",
+                    "Tokenomics Paper (PDF)",
+                    "Consensus Mechanism Research (PDF)"
                 ]
             }
         ]
-    },
-    "meta-payment": {
-        title: "Meta Payment",
-        subtitle: "Break the Boundaries in Payment Solutions",
-        sections: [
-            {
-                title: "All Payment Methods",
-                type: "grid",
-                items: [
-                    { title: "MetaCard", desc: "Make daily expenses with digital assets." },
-                    { title: "MetaPos", desc: "Receive payments easily from e-commerce." },
-                    { title: "Physical Pos", desc: "Accept digital assets at physical branches." },
-                    { title: "QR Code", desc: "Secure payments via MetaChain app." }
-                ]
-            }
-        ]
-    },
-    "privacy-policy": { title: "Privacy Policy", subtitle: "Your Data Protection", sections: [{ content: "We value your privacy...", type: "text" }] },
-    "careers": { title: "Careers", subtitle: "Join the Team", sections: [{ content: "View open positions...", type: "text" }] }
+    }
 };

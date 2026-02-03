@@ -56,10 +56,10 @@ export default function Header() {
             label: "Learn",
             items: [
                 { name: "Dictionary", href: "/web/dictionary" },
-                { name: "Whitepaper", href: "#" },
+                { name: "Whitepaper", href: "/web/whitepaper" },
                 { name: "Tokenomics", href: "/web/tokenomics" },
                 { name: "Roadmap", href: "/web/roadmap" },
-                { name: "Listing Platforms", href: "#" },
+                { name: "Listing Platforms", href: "/web/listing-platforms" },
             ],
         },
     ];
@@ -104,17 +104,17 @@ export default function Header() {
                         </button>
 
                         {/* Cube Dropdown */}
-                        <div className={`absolute top-full left-0 mt-4 w-80 p-6 rounded-3xl glass-panel border border-white/10 shadow-2xl shadow-purple-900/40 transition-all duration-300 origin-top-left ${cubeMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
+                        <div className={`absolute top-full left-0 mt-4 w-80 p-6 rounded-3xl bg-[#0f1115] border border-white/20 shadow-2xl shadow-black ring-1 ring-white/10 transition-all duration-300 origin-top-left ${cubeMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
                             <div className="text-xs font-bold text-gray-500 uppercase mb-4 tracking-wider">Meta Ecosystem</div>
                             <div className="grid grid-cols-2 gap-4">
                                 {ecosystemApps.map((app) => (
                                     <Link
                                         key={app.name}
                                         href={app.href}
-                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-cyan-500/30 transition-all group"
+                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/50 transition-all group"
                                         onClick={() => setCubeMenuOpen(false)}
                                     >
-                                        <div className="p-2 rounded-full bg-black/40 group-hover:scale-110 transition-transform">
+                                        <div className="p-2 rounded-full bg-black/60 group-hover:scale-110 transition-transform shadow-lg">
                                             {app.icon}
                                         </div>
                                         <span className="text-xs font-medium text-gray-300 group-hover:text-white">{app.name}</span>
@@ -152,7 +152,7 @@ export default function Header() {
                         </div>
                     ))}
 
-                    <Link href="#" className="btn-outline text-sm">
+                    <Link href="/web/whitepaper" className="btn-outline text-sm">
                         Whitepaper
                     </Link>
                     <Link href="/login" className="btn-primary text-sm shadow-lg shadow-purple-600/20">
