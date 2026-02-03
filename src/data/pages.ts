@@ -53,16 +53,16 @@ export const pagesData: Record<string, PageContent> = {
     },
     "meta-chain": {
         title: "MetaChain",
-        subtitle: "Fast, Secure, and Scalable",
+        subtitle: "The Foundation of the Metaverse",
         sections: [
             {
-                title: "Proof of Meta",
-                content: "MetaAnthill minimizes the speed, security, and scalability issues in blockchain networks. With Proof of Meta, users can choose the most suitable mining method for their hardware.",
+                title: "Proof of Meta (PoM)",
+                content: "Fast, Secure, and Scalable. MetaAnthill is a structure that minimizes speed, security, and scalability issues. PoM is a consensus where users choose mining methods suitable for their hardware.",
                 type: "text"
             },
             {
-                title: "MVM & Performance",
-                content: "MetaVirtualMachine provides fast transfer approval with its unique consensus. With a Transaction Control Speed (TCPS) of over 700,000 transactions per second, MetaChain minimizes scalability issues.",
+                title: "MVM (Meta Virtual Machine)",
+                content: "MetaVirtualMachine is a consensus that provides fast transfer approval. TCPS (Transaction Control Speed) allows over 700,000 transactions per second.",
                 type: "text"
             },
             {
@@ -78,18 +78,20 @@ export const pagesData: Record<string, PageContent> = {
     },
     "metaairdrop": {
         title: "MetaAirdrop",
-        subtitle: "Meet the necessary conditions and win now the equivalent of 10,000 MetaChain",
+        subtitle: "Meet the necessary conditions and win 10,000 META",
         sections: [
             {
-                title: "How to Join?",
-                content: "Register now to start earning META. Unlike ordinary airdrops, earn rewards with MetaAirtime.",
+                title: "How to Join",
+                content: "Register now to start earning. Unlike ordinary airdrops, earn rewards with MetaAirtime. New accounts receive 10,000 META equivalent immediately upon verification.",
                 type: "text"
             },
             {
-                title: "New Account Bonus",
-                type: "grid",
+                title: "Earning Mechanisms",
+                type: "list",
                 items: [
-                    { title: "10,000 META", desc: "Register Now and Start Earning immediately." }
+                    "MetaAirtime: Continuous rewards for active users.",
+                    "Referral Bonus: Earn when friends join via your link.",
+                    "Verification Reward: Immediate bonus after KYC."
                 ]
             }
         ]
@@ -98,7 +100,186 @@ export const pagesData: Record<string, PageContent> = {
         title: "Manifesto",
         subtitle: "The Future is Open",
         sections: [
-            { content: "We believe in a future where... (Placeholder for manifesto text)", type: "text" }
+            { content: "We believe in a future where community-driven technology empowers individuals to reclaim their digital sovereignty. MetaChain is not just a network; it's a movement towards an open, interoperable metaverse.", type: "text" }
+        ]
+    },
+    "discover": {
+        title: "Discover MetaChain",
+        subtitle: "Everything You Need to Know About MetaChain Ecosystem",
+        sections: [
+            {
+                title: "Comprehensive Ecosystem",
+                type: "grid",
+                items: [
+                    { title: "MetaChain", desc: "Security, scalability, and efficiency with PoM consensus." },
+                    { title: "MetaCoin", desc: "New-Gen Local Digital Asset." },
+                    { title: "MetaExchange", desc: "Secure and User-Friendly Digital Asset Platform." },
+                    { title: "MetaLaunchpad", desc: "Create and list your own digital asset easily." },
+                    { title: "MetaNFT", desc: "Redefining NFTs with a Brand New Experience." },
+                    { title: "MetaWallet", desc: "Next-Gen Digital Wallet for all values." },
+                    { title: "MetaMLM", desc: "Unique reward system where everyone wins." },
+                    { title: "MetaRealEstate", desc: "Affordable Real Estate via Digital Ownership." },
+                    { title: "MetaPayment", desc: "The future of cross-border and local payments." }
+                ]
+            },
+            {
+                title: "What is MetaChain?",
+                content: "MetaChain is building the world's most comprehensive blockchain ecosystem. Much more than a digital asset platform, it completely changes the understanding of blockchain with its ecosystem and responds to every need of individuals.",
+                type: "text"
+            }
+        ]
+    },
+    "meta-coin": {
+        title: "MetaCoin (META)",
+        subtitle: "The Native Asset of MetaChain",
+        sections: [
+            {
+                title: "Burn Mechanisms",
+                content: "MetaChain will be burned regularly with three different mechanisms: Auto-Burn, Fee-Burn, and Strategic Burn to ensure long-term value.",
+                type: "text"
+            },
+            {
+                title: "Utility",
+                type: "grid",
+                items: [
+                    { title: "Events", desc: "Participate in MetaAirdrop events to earn META." },
+                    { title: "All Products", desc: "Use MetaChain for all products in the ecosystem." }
+                ]
+            }
+        ]
+    },
+    "exchange": {
+        title: "MetaExchange",
+        subtitle: "Trade Without Limits",
+        sections: [
+            {
+                title: "Trading Interfaces",
+                type: "grid",
+                items: [
+                    { title: "Lite Mode", desc: "Clean interface for beginners." },
+                    { title: "Pro Mode", desc: "Advanced tools for professional traders." },
+                    { title: "Meta Mode", desc: "Customizable workspace for institutions." }
+                ]
+            }
+        ]
+    },
+    "launchpad": {
+        title: "MetaLaunchpad",
+        subtitle: "Launch Your Vision",
+        sections: [
+            {
+                title: "Easy Token Creation",
+                content: "Create your own digital asset within minutes without any software knowledge. Use our Wizard for automated deployment or Advanced Mode for customization.",
+                type: "text"
+            },
+            {
+                title: "Features",
+                type: "grid",
+                items: [
+                    { title: "Advanced Mode", desc: "Customize assets without software knowledge." },
+                    { title: "Wizard", desc: "Create digital assets within minutes." },
+                    { title: "Airdrop Tools", desc: "Organize airdrops with AI-backed tools." }
+                ]
+            }
+        ]
+    },
+    "meta-nft": {
+        title: "MetaNFT",
+        subtitle: "Own the Digital Future",
+        sections: [
+            {
+                title: "Features",
+                type: "grid",
+                items: [
+                    { title: "Fractional NFTs", desc: "Own a piece of high-value digital assets." },
+                    { title: "NFT Marketplace", desc: "The gateway to unique digital collectibles." },
+                    { title: "Meta Studio", desc: "Create and mint NFTs effortlessly." }
+                ]
+            }
+        ]
+    },
+    "meta-realestate": {
+        title: "MetaRealEstate",
+        subtitle: "Global Property Ownership",
+        sections: [
+            {
+                title: "Digital Ownership",
+                content: "Affordable real estate investment is now possible. Tokenize properties to reach global investors and earn regular income from rental yields.",
+                type: "text"
+            },
+            {
+                title: "Advantages",
+                type: "list",
+                items: ["Low Capital Requirement", "Regular Income Distribution", "No Intermediary Fees"]
+            }
+        ]
+    },
+    "meta-wallet": {
+        title: "MetaWallet",
+        subtitle: "Control Your Wealth",
+        sections: [
+            {
+                title: "Multi-Chain Support",
+                content: "Store and manage all your digital assets in one place. One click, all assets. Secure, private, and powerful.",
+                type: "text"
+            },
+            {
+                title: "Platforms",
+                type: "grid",
+                items: [
+                    { title: "Browser Extension", desc: "Seamless browsing and access to services." },
+                    { title: "Mobile App", desc: "Manage assets on the go." },
+                    { title: "Desktop App", desc: "Powerful and secure asset management." }
+                ]
+            }
+        ]
+    },
+    "meta-mlm": {
+        title: "Meta MLM",
+        subtitle: "Connect and Grow",
+        sections: [
+            {
+                title: "Earning for the Whole Ecosystem",
+                content: "Refer friends and earn up to Step 19. A system that scales with the community and distributes rewards fairly based on contribution.",
+                type: "text"
+            }
+        ]
+    },
+    "meta-movie": {
+        title: "Meta Movie",
+        subtitle: "Decentralized Cinema",
+        sections: [
+            {
+                title: "Funding Projects",
+                content: "Revolutionize the film industry. Fund your creative projects through tokenization and share future revenues with your supporters.",
+                type: "text"
+            }
+        ]
+    },
+    "meta-music": {
+        title: "Meta Music",
+        subtitle: "Sound of the Future",
+        sections: [
+            {
+                title: "Raise Funds for Your Demo",
+                content: "Artists can tokenize their work to raise funds directly from fans. No middlemen, full transparency, and global reach.",
+                type: "text"
+            }
+        ]
+    },
+    "meta-payment": {
+        title: "Meta Payment",
+        subtitle: "Seamless Global Payments",
+        sections: [
+            {
+                title: "Payment Solutions",
+                type: "grid",
+                items: [
+                    { title: "MetaCard", desc: "Spend crypto anywhere cards are accepted." },
+                    { title: "Online Gateway", desc: "Accept META on your website." },
+                    { title: "Point of Sale", desc: "Physical POS systems for retail shops." }
+                ]
+            }
         ]
     },
     "tokenomics": {

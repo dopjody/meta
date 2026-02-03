@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X, ArrowRight, LayoutGrid, Coins, Globe, Wallet, Building, Music, Clapperboard, CreditCard, ShoppingBag } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight, LayoutGrid, Coins, Globe, Wallet, Building, Music, Clapperboard, CreditCard, ShoppingBag, Cpu, Users } from "lucide-react";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -65,14 +65,20 @@ export default function Header() {
     ];
 
     const ecosystemApps = [
-        { name: "Exchange", icon: <Coins className="w-5 h-5 text-yellow-400" />, href: "/web/exchange" },
-        { name: "Wallet", icon: <Wallet className="w-5 h-5 text-cyan-400" />, href: "/web/meta-wallet" },
-        { name: "NFTs", icon: <ShoppingBag className="w-5 h-5 text-pink-400" />, href: "/web/meta-nft" },
-        { name: "RealEstate", icon: <Building className="w-5 h-5 text-blue-400" />, href: "/web/meta-realestate" },
-        { name: "Music", icon: <Music className="w-5 h-5 text-purple-400" />, href: "/web/meta-music" },
-        { name: "Movies", icon: <Clapperboard className="w-5 h-5 text-red-400" />, href: "/web/meta-movie" },
-        { name: "Payment", icon: <CreditCard className="w-5 h-5 text-green-400" />, href: "/web/meta-payment" },
         { name: "Discover", icon: <Globe className="w-5 h-5 text-orange-400" />, href: "/web/discover" },
+        { name: "Airdrop", icon: <Coins className="w-5 h-5 text-yellow-400" />, href: "/web/metaairdrop" },
+        { name: "MetaChain", icon: <Cpu className="w-5 h-5 text-blue-400" />, href: "/web/meta-chain" },
+        { name: "MetaCoin", icon: <Coins className="w-5 h-5 text-purple-400" />, href: "/web/meta-coin" },
+        { name: "Exchange", icon: <Coins className="w-5 h-5 text-yellow-500" />, href: "/web/exchange" },
+        { name: "Launchpad", icon: <LayoutGrid className="w-5 h-5 text-green-400" />, href: "/web/launchpad" },
+        { name: "NFTs", icon: <ShoppingBag className="w-5 h-5 text-pink-400" />, href: "/web/meta-nft" },
+        { name: "RealEstate", icon: <Building className="w-5 h-5 text-blue-500" />, href: "/web/meta-realestate" },
+        { name: "Wallet", icon: <Wallet className="w-5 h-5 text-cyan-400" />, href: "/web/meta-wallet" },
+        { name: "MLM", icon: <Users className="w-5 h-5 text-orange-500" />, href: "/web/meta-mlm" },
+        { name: "Movies", icon: <Clapperboard className="w-5 h-5 text-red-400" />, href: "/web/meta-movie" },
+        { name: "Music", icon: <Music className="w-5 h-5 text-purple-500" />, href: "/web/meta-music" },
+        { name: "Payment", icon: <CreditCard className="w-5 h-5 text-green-500" />, href: "/web/meta-payment" },
+        { name: "Login", icon: <Users className="w-5 h-5 text-gray-400" />, href: "/login" },
     ];
 
     return (
@@ -104,9 +110,9 @@ export default function Header() {
                         </button>
 
                         {/* Cube Dropdown */}
-                        <div className={`absolute top-full left-0 mt-4 w-80 p-6 rounded-3xl bg-[#0f1115] border border-white/20 shadow-2xl shadow-black ring-1 ring-white/10 transition-all duration-300 origin-top-left ${cubeMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
+                        <div className={`absolute top-full left-0 mt-4 w-[400px] p-6 rounded-3xl bg-[#0f1115] border border-white/20 shadow-2xl shadow-black ring-1 ring-white/10 transition-all duration-300 origin-top-left ${cubeMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
                             <div className="text-xs font-bold text-gray-500 uppercase mb-4 tracking-wider">Meta Ecosystem</div>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-3 gap-3">
                                 {ecosystemApps.map((app) => (
                                     <Link
                                         key={app.name}

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, Construction, ChevronRight } from "lucide-react";
+import { ArrowLeft, Construction, ChevronRight, ArrowRight } from "lucide-react";
 import { useParams } from "next/navigation";
 import { pagesData } from "@/data/pages";
 
